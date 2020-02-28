@@ -2,6 +2,9 @@
 
 # linebot-cache-updater
 
+更新所有cache  
+更新完後送broadcast  
+
 -----  
 ### best buy sell  
 	{
