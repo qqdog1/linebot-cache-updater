@@ -6,17 +6,10 @@
 更新完後送broadcast  
 
 -----  
-### best buy sell  
+### command format 
 	{
-	  "type": 1,
+	  "description": "每日什麼什麼",
 	  "lastUpdate": "2020/02/28",
-	  "buy": [
-		"1101台 泥",
-		"2330台積電",
-		"1234 AAA"
-	  ],
-	  "sell": [
-		"9989 哈哈哈",
-		"6630 呵呵呵"
-	  ]
+	  "command": "bestsell",
+	  "value": "1. 1101台 尼 \n 2. 2330台機電\n"
 	}
