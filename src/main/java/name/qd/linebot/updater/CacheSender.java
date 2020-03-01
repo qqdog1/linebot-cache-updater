@@ -20,10 +20,9 @@ public class CacheSender {
 		requestBuilder = new Request.Builder().url(urlBuilder.build().url().toString());
 	}
 	
-	public void send(String key, String value) throws Exception {
+	public void send(String data) throws Exception {
 		FormBody.Builder builder = new FormBody.Builder();
-		builder.addEncoded("key", key);
-		builder.addEncoded("value", value);
+		builder.addEncoded("data", data);
 		FormBody body = builder.build();
 		
 		Request request = requestBuilder.post(body).build();

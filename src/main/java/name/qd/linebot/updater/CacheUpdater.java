@@ -5,12 +5,13 @@ import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import name.qd.linebot.updater.task.TaskManager;
+
 public class CacheUpdater {
 	private Logger log;
 	
 	private CacheUpdater() {
 		init();
-		check();
 		update();
 	}
 
@@ -20,15 +21,13 @@ public class CacheUpdater {
 		log = LoggerFactory.getLogger(CacheUpdater.class);
 	}
 	
-	private void check() {
-
-	}
-	
 	private void update() {
-		
+		log.info("Run cache updater.");
+		TaskManager.getInstance().doTask();
+		log.info("Cache updated.");
 	}
 	
 	public static void main(String[] s) {
-		CacheUpdater cacheUpdater = new CacheUpdater();
+		new CacheUpdater();
 	}
 }
