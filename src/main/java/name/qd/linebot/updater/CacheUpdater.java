@@ -11,8 +11,6 @@ public class CacheUpdater {
 	private Logger log;
 	
 	private CacheUpdater() {
-		init();
-		update();
 	}
 
 	private void init() {
@@ -28,6 +26,8 @@ public class CacheUpdater {
 	}
 	
 	public static void main(String[] s) {
-		new CacheUpdater();
+		CacheUpdater cacheUpdater = new CacheUpdater();
+		cacheUpdater.init();
+		cacheUpdater.update();
 	}
 }

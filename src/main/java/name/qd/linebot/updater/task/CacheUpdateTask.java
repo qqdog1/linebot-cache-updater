@@ -1,12 +1,15 @@
 package name.qd.linebot.updater.task;
 
+import java.text.SimpleDateFormat;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import name.qd.linebot.updater.util.JsonUtils;
 
 public abstract class CacheUpdateTask {
-	private ObjectMapper objectMapper = JsonUtils.getObjectMapper();
+	protected static SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+	protected ObjectMapper objectMapper = JsonUtils.getObjectMapper();
 	
 	private String command;
 	private String description;
@@ -26,6 +29,10 @@ public abstract class CacheUpdateTask {
 		node.put("lastUpdate", time);
 		node.put("value", value);
 		return node.toString();
+	}
+	
+	public void setValue(String value) {
+		this.value = value;
 	}
 	
 	public abstract void doTask();

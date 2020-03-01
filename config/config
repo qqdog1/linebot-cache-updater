@@ -1,2 +1,3 @@
 file_cache_path=D:/workspace/filecache/
 twse_data_path=D:/workspace/file/
+line_bot_address=https://tech-linebot.herokuapp.com/
