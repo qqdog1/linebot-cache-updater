@@ -28,7 +28,7 @@ public class TaskManager {
 	}
 	
 	private TaskManager() {
-		analyzerManager = new ChipAnalyzerManager(ConfigLoader.getInstance().getCachePath(), false);
+		analyzerManager = new ChipAnalyzerManager(ConfigLoader.getInstance().getCachePath(), true);
 		dataSource = new TWSEDataSource(ConfigLoader.getInstance().getTWSEDatePath());
 		
 		set.add(new BestBuySellTask(analyzerManager, dataSource));

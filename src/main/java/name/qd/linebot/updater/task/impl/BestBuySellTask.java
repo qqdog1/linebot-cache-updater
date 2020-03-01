@@ -71,7 +71,7 @@ public class BestBuySellTask extends CacheUpdateTask {
 		
 		for(List<String> lst : lstResult) {
 			for(String s : lst) {
-				System.out.print(s);
+				System.out.print(s+" , ");
 			}
 			System.out.println("");
 		}
