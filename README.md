@@ -7,9 +7,11 @@
 
 -----  
 ### command format 
-	{
-	  "description": "每日什麼什麼",
-	  "lastUpdate": "2020/02/28",
-	  "command": "bestsell",
-	  "value": "1. 1101台 尼 \n 2. 2330台機電\n"
-	}
+	[
+		{
+		  "description": "每日什麼什麼",
+		  "lastUpdate": "2020/02/28",
+		  "command": "bestsell",
+		  "value": "1. 1101台 尼 \n 2. 2330台機電\n"
+		}
+	]
