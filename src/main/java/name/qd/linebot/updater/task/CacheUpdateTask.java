@@ -3,6 +3,7 @@ package name.qd.linebot.updater.task;
 import java.text.SimpleDateFormat;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import name.qd.linebot.updater.util.JsonUtils;
@@ -23,12 +24,14 @@ public abstract class CacheUpdateTask {
 	}
 	
 	public String getJsonString() {
+		ArrayNode arrayNode = objectMapper.createArrayNode();
 		ObjectNode node = objectMapper.createObjectNode();
 		node.put("command", command);
 		node.put("description", description);
 		node.put("lastUpdate", time);
 		node.put("value", value);
-		return node.toString();
+		arrayNode.add(node);
+		return arrayNode.toString();
 	}
 	
 	public void setValue(String value) {

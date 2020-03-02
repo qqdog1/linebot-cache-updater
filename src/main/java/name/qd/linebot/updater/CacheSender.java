@@ -37,7 +37,7 @@ public class CacheSender {
 		int status = response.code();
 		if(status != 200) {
 			String responseBody = response.body().string();
-			log.error("Send cache update failed. status:{} {}, {}", status, responseBody);
+			log.error("Send cache update failed. status:{}, {}", status, responseBody);
 			throw new Exception(responseBody);
 		}
 	}
