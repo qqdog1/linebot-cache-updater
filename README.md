@@ -9,10 +9,11 @@
 ### command format 
 	[
 		{
-		  "description": "每日什麼什麼",
+		  "description": "每日什麼什麼的",
 		  "lastUpdate": "2020/02/28",
 		  "command": "bestsell",
-		  "value": [
+		  "value": "喔喔好喔",
+		  "inner" : [
 				{
 				  "description": "每日什麼什麼",
 				  "lastUpdate": "2020/02/28",
